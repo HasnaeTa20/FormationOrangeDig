@@ -105,10 +105,14 @@ class BasicPage extends StatelessWidget {
         SizedBox(width: 10,),
 
 
-        FloatingActionButton(onPressed: (){},
-        backgroundColor: Colors.green,
-        
-        child: Icon(Icons.edit,color: Colors.white,),)
+        SizedBox(
+          width: 56, // Width of ElevatedButton by default
+        height: 56,
+          child: FloatingActionButton(onPressed: (){},
+          backgroundColor: Colors.green,
+          
+          child: Icon(Icons.edit,color: Colors.white,),),
+        )
 
                         ],
                       ),
@@ -182,9 +186,9 @@ class BasicPage extends StatelessWidget {
       
        simplecolumn(),
        SizedBox(width: 20.0),
-       simplecolumn(),
+       simpleecolumn(),
        SizedBox(width: 20.0),
-       simplecolumn(),
+       simpleecolumnn(),
 
        ]),
       //          Container(
@@ -227,15 +231,16 @@ class BasicPage extends StatelessWidget {
                          backgroundImage: AssetImage('assets/pexels-photo-6897434.jpeg'),
                       
                          ),
-                          SizedBox(width: 20,),
-                simpleText('text'),
-                SizedBox(width: 50,),
-                simpleText('text2')
+                         SizedBox(width: 10,),
+                simpleteex('text'),
+                Spacer(),
+               simplee('text2')
                   
                 ]
               ),
+              SizedBox(height: 10,),
               Image.asset("assets/istockphoto-1370481100-612x612.webp", ),
-              simpleText('text3'),
+              simplee('text3'),
               Divider(thickness: 2,),
               Container(
           padding: EdgeInsets.all(4.0),
@@ -245,13 +250,13 @@ class BasicPage extends StatelessWidget {
                        ),
                         
               SizedBox(width: 20.0),
-              simpleteext('0 likes'),
-           SizedBox(width: 20,),
+              simpleteex('0 likes'),
+           Spacer(),
                  simpleicons(Icons.comment,
                        ),
                         
               SizedBox(width: 20.0),
-              simpleteext('0 comments'),
+              simpleteex('0 comments'),
             ]
             )
             ),
@@ -262,6 +267,57 @@ class BasicPage extends StatelessWidget {
         ),
       ),
               ),
+                       Container(
+      padding: EdgeInsets.symmetric(vertical: 5.0),
+      child: Card(
+        child: Container(
+          padding: EdgeInsets.all(15.0),
+          child: Column(
+            children: <Widget>[
+              Row(
+                children:[
+                CircleAvatar(
+                          radius: 20,
+                         backgroundImage: AssetImage('assets/pexels-photo-6897434.jpeg'),
+                      
+                         ),
+                        SizedBox(width: 10,),
+                simpleteex('text'),
+               Spacer(),
+                simplee('text2')
+                  
+                ]
+              ),
+               SizedBox(height: 10,),
+              Image.asset("assets/bunny-5014814_640.jpg", ),
+             simplee('text3'),
+              Divider(thickness: 2,),
+              Container(
+          padding: EdgeInsets.all(4.0),
+          child: Row(
+            children: <Widget>[
+                 simpleicons(Icons.favorite,
+                       ),
+                        
+              SizedBox(width: 20.0),
+              simpleteex('0 likes'),
+           Spacer(),
+                 simpleicons(Icons.comment,
+                       ),
+                        
+              SizedBox(width: 20.0),
+              simpleteex('0 comments'),
+            ]
+            )
+            ),
+
+
+            ],
+          ),
+        ),
+      ),
+              ),
+
 
 
               
@@ -357,6 +413,37 @@ Text simpleText(String text){
 
 
 }
+  Text simpleteex(String text){
+  return Text(
+    text,
+    style: const TextStyle(
+      fontSize: 14,
+      color: Colors.black,
+   
+    
+      
+    ),
+    textAlign:TextAlign.center,
+
+  );
+  
+
+
+}
+ Text simplee(String text){
+  return Text(
+    text,
+    style: const TextStyle(
+      fontSize: 14,
+      color: Colors.blue,
+   
+    
+      
+    ),
+    textAlign:TextAlign.center,
+
+  );
+ }
 Text textRich(String a,String b,String c){
   return Text.rich(
     
@@ -387,35 +474,78 @@ Text textRich(String a,String b,String c){
 Column simplecolumn(){
   return Column(
           children: [
-            // Container(decoration: image,)
-          Image.asset("assets/istockphoto-1370481100-612x612.webp", 
+         // Wrap the Image with ClipRRect
+       
+           Container(
+            decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          image:DecorationImage(
+            image: AssetImage("assets/istockphoto-1370481100-612x612.webp"),
+            fit: BoxFit.cover,
+          ), 
+            ),
           height: 100,
-          width: 100,),
-          
-simpleText("test"),
+          width: 100,
+           ),
+           
+           
+         
+         
+simpleteex("test"),
           ],
             );
 }
 
 
 
+Column simpleecolumn(){
+  return Column(
+          children: [
+         // Wrap the Image with ClipRRect
+       
+           Container(
+            decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          image:DecorationImage(
+            image: AssetImage("assets/pexels-photo-4588423.webp"),
+            fit: BoxFit.cover,
+          ), 
+            ),
+          height: 100,
+          width: 100,
+           ),
+           
+           
+         
+         
+simpleteex("test"),
+          ],
+            );
+}
 
-//  Row(
-//       children: <Widget>[
-//         Expanded(
-//           child: Image.asset('images/penny.png'),
-//         ),
-//         Expanded(
-//           child: Image.asset('images/penny.png'),
-//         ),
-//         Expanded(
-//           child: Image.asset('images/penny.png'),
-//         ),
-//         Expanded(
-//           child: Image.asset('images/penny.png'),
-//         ),
-//         Expanded(
-//           child: Image.asset('images/penny.png'),
-//         ),
-//       ],
-//     ),
+Column simpleecolumnn(){
+  return Column(
+          children: [
+         // Wrap the Image with ClipRRect
+       
+           Container(
+            decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          image:DecorationImage(
+            image: AssetImage("assets/pexels-photo-6897434.jpeg"),
+            fit: BoxFit.cover,
+          ), 
+            ),
+          height: 100,
+          width: 100,
+           ),
+           
+           
+         
+         
+simpleteex("test"),
+          ],
+            );
+}
+
+
