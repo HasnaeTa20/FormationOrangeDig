@@ -10,6 +10,7 @@ class BasicPage extends StatelessWidget {
     return Scaffold(
       appBar:
     AppBar(
+       backgroundColor: Color.fromARGB(255, 177, 245, 198),
       leading: Icon(Icons.favorite,
       color: Colors.black,
       size: 20,
@@ -67,7 +68,7 @@ class BasicPage extends StatelessWidget {
                             child: ElevatedButton(
                                     child: Text('Modify Profile',
                                     style:  TextStyle(
-                                          color: Colors.white, fontSize: 10,  ),),
+                                          color: Colors.white, fontSize: 14,  ),),
                                     style: ElevatedButton.styleFrom(
                                       primary: Colors.green,
                                       side: BorderSide(color: Colors.green, width: 1),
@@ -81,13 +82,16 @@ class BasicPage extends StatelessWidget {
         SizedBox(width: 10,),
 
 
-        SizedBox(
-          width: 56, // Width of ElevatedButton by default
-        height: 56,
-          child: FloatingActionButton(onPressed: (){},
-          backgroundColor: Colors.green,
-          
-          child: Icon(Icons.edit,color: Colors.white,),),
+        Padding(
+          padding: const EdgeInsets.only(left: 20,right: 20,top: 20,bottom: 20),
+          child: SizedBox(
+            width: 56, // Width of ElevatedButton by default
+          height: 56,
+            child: FloatingActionButton(onPressed: (){},
+            backgroundColor: Colors.green,
+            
+            child: Icon(Icons.edit,color: Colors.white,),),
+          ),
         )
 
                         ],
@@ -132,7 +136,7 @@ class BasicPage extends StatelessWidget {
                        ),
                         
               SizedBox(width: 20.0),
-              simpleteext('home')
+              simpleteext('favorite')
             ]
             )
             ),
