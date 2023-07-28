@@ -33,7 +33,10 @@ class _HomeState extends State<Home> {
             
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text('Find The Best Health For You'),
+              child: Text('Find The Best Health For You',style: TextStyle(
+                 
+                  fontSize: 18.0,
+                  color: Colors.white)),
             ),
             SizedBox(height: 20,),
             Padding(
@@ -78,7 +81,10 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Text('Popular'),
+                  Text('Popular',style: TextStyle(
+                 
+                  fontSize: 18.0,
+                  color: Colors.white)),
                 ],
               ),
             ),
