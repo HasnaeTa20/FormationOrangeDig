@@ -12,7 +12,7 @@ class DetailsPage extends StatefulWidget {
 }
 
 class _DetailsPageState extends State<DetailsPage> {
-  var selectedCard = 'WEIGHT';
+  
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +35,7 @@ class _DetailsPageState extends State<DetailsPage> {
                   color: Colors.white)),
           centerTitle: true,
           actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.more_horiz),
-              onPressed: () {},
-              color: Colors.white,
-            )
+           
           ],
         ),
         body: ListView(children: [
