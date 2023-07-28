@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:my_app/Basicpage.dart';
+import 'package:my_app/differentWidget.dart';
+import 'package:my_app/home.dart';
 import 'package:my_app/stateful.dart';
 
 void main() {
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       debugShowCheckedModeBanner:false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -21,7 +24,22 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 146, 218, 169)),
         useMaterial3: true,
       ),
-      home:InterractionPage() ,
+      home:Home(),
+      // DifferentWidget(),
+      //  BasicPage()
+      // InterractionPage() ,
     );
   }
 }
+
+
+//dart mood
+// theme: ThemeData(
+//          brightness: Brightness.light,
+//         /* light theme settings */
+//       ),
+//       darkTheme: ThemeData(
+//         brightness: Brightness.dark,
+//         /* dark theme settings */
+//       ),
+//       themeMode: ThemeMode.dark, 
